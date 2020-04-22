@@ -1,5 +1,5 @@
-import {Component, Input} from '@angular/core';
-import {MatDialog, MatDialogRef} from '@angular/material/dialog';
+import {Component, Inject, Input} from '@angular/core';
+import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from '@angular/material/dialog';
 import {FormGroup, FormControl, Validators} from '@angular/forms';
 import {Tarefa} from '../add-tarefa/Tarefa';
 import {Observable} from 'rxjs';
@@ -24,8 +24,9 @@ export class EditTarefaComponent {
 
   openDialog(): void {
   	this.dialog.open(EditTarefaComponentDialog, {
-  		width: '40%',
+  	  width: '40%',
   		minHeight: '400px',
+      data: this.tarefa,
   	});
   }
 
@@ -43,17 +44,22 @@ export class EditTarefaComponentDialog {
   tarefasCollection: AngularFirestoreCollection<Tarefa>;
   tarefas$: Observable<Tarefa[]>;
   checked = false;
-  form = new FormGroup({
-    titulo: new FormControl,
-    notas: new FormControl,
-  });
+  form = null;
 
 
 
-  constructor(private db: AngularFirestore,
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any,
+              private db: AngularFirestore,
               public dialogRef: MatDialogRef<EditTarefaComponentDialog>,
               private store: Store<TarefaState>
   ) {
+    this.form = new FormGroup({
+      id: new FormControl(data.id),
+      titulo: new FormControl(data.titulo),
+      notas: new FormControl(data.notas),
+    });
+
+
   }
 
 
