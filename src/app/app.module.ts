@@ -13,31 +13,38 @@ import {SharedModule} from './shared/shared.module';
 import {CoreModule} from './core/core.module';
 import {StoreModule} from '@ngrx/store';
 import {EffectsModule} from '@ngrx/effects';
+import {AngularFireAuthModule} from '@angular/fire/auth';
+import {AuthenticationService} from './core/authentication/service/authentication.service';
+import {ConfirmationPopoverModule} from 'angular-confirmation-popover';
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    routingComponents,
+	declarations: [
+		AppComponent,
+		routingComponents,
 
-  ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    AppRoutingModule,
-    SharedModule,
-    HttpClientModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule,
-    MatSnackBarModule,
-    MatStepperModule,
-    CoreModule,
-    StoreModule.forRoot( {}),
-    EffectsModule.forRoot([])
+	],
+	imports: [
+		BrowserModule,
+		BrowserAnimationsModule,
+		AppRoutingModule,
+		SharedModule,
+		HttpClientModule,
+		AngularFireAuthModule,
+		AngularFireModule.initializeApp(environment.firebase),
+		AngularFirestoreModule,
+		MatSnackBarModule,
+		MatStepperModule,
+		CoreModule,
+		StoreModule.forRoot( {}),
+		EffectsModule.forRoot([]),
+		ConfirmationPopoverModule.forRoot({
+			confirmButtonType: 'danger'
+		}),
 
-  ],
-  providers: [],
-  bootstrap: [AppComponent],
+	],
+	providers: [AuthenticationService],
+	bootstrap: [AppComponent],
 })
 export class AppModule {
 }

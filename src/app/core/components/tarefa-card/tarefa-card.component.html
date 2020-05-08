@@ -1,16 +1,17 @@
-<div class="card">
-  <mat-card>
-    <mat-card-header>
-      <div fxLayout="column" fxLayoutAlign="space-between center">
-        <mat-card-title>{{tarefa.titulo}}</mat-card-title>
-        <span>---------------------</span>
-        <mat-card-title>{{tarefa.notas}}</mat-card-title>
-      </div>
-    </mat-card-header>
+<mat-card class="card">
+  <mat-card-header>
+    <div fxLayout="column" fxLayoutAlign="space-between center">
+      <mat-card-title>{{tarefa.titulo}}</mat-card-title>
+      <span>---------------------</span>
+      <mat-card-title>{{tarefa.notas}}</mat-card-title>
+    </div>
+  </mat-card-header>
+  <mat-card-actions class="card-actions">
+    <app-edit-tarefa [tarefa]="tarefa"></app-edit-tarefa>
 
-    <mat-card-actions class="card-actions">
-      <app-edit-tarefa [tarefa]="tarefa"></app-edit-tarefa>
-      <button (click)="onDelete(tarefa)" style="color:red" mat-button>Deletar</button>
-    </mat-card-actions>
-  </mat-card>
-</div>
+
+    <app-delete-tarefa [tarefa]="tarefa" ></app-delete-tarefa>
+  </mat-card-actions>
+</mat-card>
+
+

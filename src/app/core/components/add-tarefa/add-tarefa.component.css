@@ -8,3 +8,17 @@
 .example-full-width {
   width: 100%;
 }
+
+
+.botaoadd{
+  background: blue;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 10%;
+  max-width: 100%;
+  margin: 3%;
+  margin-right: 25%;
+  margin-left: 25%;
+}

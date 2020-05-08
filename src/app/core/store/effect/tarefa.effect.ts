@@ -77,10 +77,11 @@ export class TarefaEffect {
   // -------------------------------------------UPDATE----------------------------------------------
 
   @Effect()
-  updateTodo$ = this.actions$.pipe(
+  updateTarefa$ = this.actions$.pipe(
     ofType(UPDATE_TAREFA),
     pluck('payload'),
-    exhaustMap((payload: Tarefa) => from(this.db.doc(`/tarefas/${payload.id}`)
+    exhaustMap((payload: Tarefa) =>
+      from(this.db.doc(`/tarefas/${payload.id}`)
       .set( Object.assign({}, payload), { merge: true } )).pipe(
       map(() => new UpdateTarefaSuccessAction()),
       catchError((error) => of(new UpdateTarefaFailAction(error)))

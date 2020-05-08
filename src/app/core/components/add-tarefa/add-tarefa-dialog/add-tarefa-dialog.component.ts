@@ -16,7 +16,6 @@ import {TarefaState} from '../../../store/reducer/tarefa.reducer';
 	styleUrls: ['./add-tarefa-dialog.component.css']
 })
 export class AddTarefaDialogComponent implements OnInit {
-  tarefasCollection: AngularFirestoreCollection<Tarefa>;
   tarefas$: Observable<Tarefa[]>;
   form = new FormGroup({
   	titulo: new FormControl,

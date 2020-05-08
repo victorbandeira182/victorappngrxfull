@@ -20,5 +20,9 @@ mat-card {
 }
 
 .card-actions {
-  margin-top: 10px
+  margin-top: 1em;
+}
+
+.deletebutton{
+  margin-left: 10px;
 }

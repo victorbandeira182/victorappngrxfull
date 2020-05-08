@@ -1,8 +1,13 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
-import {HomeComponent} from './core/containers/home/home.component';
 
 const routes: Routes = [
+  {path: '', pathMatch: 'full', redirectTo: 'core'},
+  {path: 'core', loadChildren: () => import('./core/core.module').then(module => module.CoreModule)}
+
+
+
+
 ];
 
 
@@ -13,4 +18,4 @@ const routes: Routes = [
 export class AppRoutingModule {
 }
 
-export const routingComponents = [HomeComponent];
+export const routingComponents = [];

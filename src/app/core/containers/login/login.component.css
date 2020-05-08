@@ -1,0 +1,189 @@
+h1 {
+  font-family: 'Cormorant Unicase', serif;
+  margin-top: 20%;
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Cormorant Unicase', serif;
+  text-align: center;
+}
+
+h3 {
+  font-family: 'Cormorant Unicase', serif;
+  text-align: center;
+}
+
+h4 {
+  text-align: justify;
+}
+
+p {
+  font-family: 'Cormorant Unicase', serif;
+  margin-top: 5%;
+  text-align: center;
+}
+
+
+
+
+.text {
+  margin-bottom: 1%;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 30px;
+  text-align: justify;
+}
+
+.card {
+  height: 100%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.buttonFacebook {
+  background: darkblue;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 10%;
+  max-width: 100%;
+}
+
+.buttonGitHub {
+  background: black;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 10%;
+  margin-top: 3%;
+  max-width: 100%;
+}
+
+.buttonGoogle {
+  background: blue;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 10%;
+  margin-top: 3%;
+  max-width: 100%;
+}
+
+.buttonSmartphone {
+  background: orange;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 10%;
+  margin-top: 3%;
+  max-width: 100%;
+}
+
+.buttonTwitter {
+  background: cornflowerblue;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 10%;
+  margin-top: 3%;
+  max-width: 100%;
+}
+
+.socialmedia {
+  font-size: 20px;
+  margin-top: 10%;
+  text-align: center;
+}
+
+.socialmedia a{
+  width: 35px;
+  height: 35px;
+  line-height: 35px !important;
+  position: relative;
+  margin: 0 15px;
+  text-align: center;
+  display: inline-block;
+  color: #111;
+
+  -webkit-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+  -moz-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+  -o-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+  -ms-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+  transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+}
+
+.socialmedia a i,
+.socialmedia a span{
+  position: relative;
+  top: 2px;
+  left: 1px;
+}
+
+.socialmedia a:before{
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid #111;
+
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+
+  -webkit-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+  -moz-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+  -o-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+  -ms-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+  transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+
+}
+
+.socialmedia a:hover{
+  color: #fff;
+}
+
+.socialmedia a:hover:before{
+  background: #111;
+}
+
+.line {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  border: 0;
+  height: 1px;
+  margin-bottom: 5%;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+.projects {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  margin-top: 15%;
+  text-align: center;
+  font-family: 'Cormorant Unicase', serif;
+}
+
+.author {
+
+}
+
+.titulologin{
+  fonte-size: 10px;
+  margin:auto;
+}
