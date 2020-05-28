@@ -1,8 +1,6 @@
 <h1 mat-dialog-title> TEM CERTEZA QUE QUER DELETAR ESTA NOTA?</h1>
 <div mat-dialog-content>
-
-      <button mat-button (click)="onNoClick()">NÃO!</button>
-      <button mat-button (click)="onDelete(form.value)" [mat-dialog-close]>SIM!</button>
-
+      <button mat-raised-button color="primary" class="deletenao" (click)="onNoClick()">NÃO!</button>
+      <button mat-raised-button color="warn" class="deletesim" (click)="onDelete(form.value)" [mat-dialog-close]>SIM!</button>
 
 </div>

@@ -3,7 +3,7 @@ import {MatDialogRef} from '@angular/material/dialog';
 import {FormGroup, FormControl, Validators} from '@angular/forms';
 import {Tarefa} from './Tarefa';
 import {Observable} from 'rxjs';
-import {AngularFirestore, AngularFirestoreCollection} from '@angular/fire/firestore';
+import {AngularFirestore} from '@angular/fire/firestore';
 import {CreateTarefaAction, GetTarefaAction} from '../../../store/actions/tarefa.action';
 import {select, Store} from '@ngrx/store';
 import {getTarefas} from '../../../store/selector/tarefa.selector';

@@ -34,7 +34,9 @@ export class DeleteTarefaComponent {
 
 @Component({
   selector: 'delete-tarefa-dialog',
-  templateUrl: './delete-tarefa-dialog.component.html'
+  templateUrl: './delete-tarefa-dialog.component.html',
+  styleUrls: ['./delete-tarefa.component.css']
+
 })
 export class DeleteTarefaComponentDialog {
   form = null;

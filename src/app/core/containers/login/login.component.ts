@@ -1,5 +1,10 @@
 import {Component, OnInit} from '@angular/core';
-import {AuthenticationService} from '../../authentication/service/authentication.service';
+// import {AuthenticationService} from '../../authentication/service/authentication.service';
+import {CreateTarefaAction} from '../../store/actions/tarefa.action';
+import {LoginAction} from '../../store/actions/user.action';
+import {Store} from '@ngrx/store';
+import {TarefaState} from '../../store/reducer/tarefa.reducer';
+import {UserState} from '../../store/reducer/user.reducer';
 
 @Component({
 	selector: 'app-login',
@@ -8,8 +13,9 @@ import {AuthenticationService} from '../../authentication/service/authentication
 })
 export class LoginComponent implements OnInit {
 
-	constructor(public authenticationService: AuthenticationService,) {
-	}
+	constructor(
+	  private store : Store<UserState>
+  ) {}
 
 	ngOnInit() {
 
@@ -20,8 +26,12 @@ export class LoginComponent implements OnInit {
 	//------------------------------------------------------------------------------------
 
 	signinGoogle() {
-		this.authenticationService.signinWithGoogle();
+    this.store.dispatch(new LoginAction());
+
+		/*this.authenticationService.signinWithGoogle();
 		console.log('Signing with Google Account');
+		*/
+
 	}
 
 }
